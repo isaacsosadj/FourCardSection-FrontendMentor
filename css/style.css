@@ -1,0 +1,165 @@
+:root{
+    /* Primary */
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    /* Neutral */
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Font */
+    --fuentePrincipal: 'Poppins', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 1.5rem;
+    font-family: var(--fuentePrincipal);
+    background-color: var(--Very-Light-Gray);
+}
+
+.container{
+    width: min(95%, 50rem);
+    margin: 0 auto;
+}
+
+/* Header */
+.header{
+    text-align: center;
+    margin-top: 6.5rem;
+}
+
+.header__title{
+    font-weight: 200;
+    font-size: 3rem;
+    color: var(--Very-Dark-Blue);
+}
+
+.header__title span{
+    font-weight: 600;
+    margin-top: 2.5rem;
+}
+
+.header__text{
+    margin-bottom: 0;
+    font-weight: 200;
+    line-height: 1.5;
+}
+
+/* Main */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 35rem);
+    gap: 3rem 2.5rem;
+    margin-top: 6.5rem;
+}
+
+.main{
+    justify-content: center;
+    display: flex;
+}
+
+.card{
+    color: var(--Very-Dark-Blue);
+    background-color: var(--white);
+    /* width: 35rem; */
+    padding: 3rem;
+    border-radius: .5rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 15px 24px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 15px 24px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 15px 24px 0px rgba(0,0,0,0.2);
+}
+
+.card__title{
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0
+}
+
+.card__text{
+    font-weight: 200;
+    font-size: 1.5rem;
+    line-height: 2;
+    margin: 1rem 0 0 0;
+    
+}
+
+.card__icons{
+    margin-top: 3.5rem;
+    width: 6rem;
+    align-self: flex-end;
+}
+
+.cyan{
+    border-top: .5rem solid var(--Cyan);
+    grid-row: 1 / 4;
+    align-self: center;
+    justify-self: flex-end;
+}
+
+.red{
+    border-top: .5rem solid var(--Red);
+}
+
+.blue{
+    border-top: .5rem solid var(--Blue);
+    grid-row: 1 / 4;
+    grid-column: 3 / 4;
+    align-self: center;
+    justify-self: flex-start;
+    
+}
+
+.orange{
+    border-top: .5rem solid var(--Orange);
+    grid-column: 2 / 3;
+}
+
+@media (max-width: 768px){
+    .grid{
+        grid-template-columns: auto;
+        column-gap: 0;
+        grid-template-rows: repeat(4, auto);
+        width: 80%;
+    }
+
+    .main{
+        
+    }
+
+    .cyan{
+        width: 100%;
+        grid-row: 1 / 2;
+    }
+
+    .red{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    
+    .orange{
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    
+    .blue{
+        width: 100%;
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+}
