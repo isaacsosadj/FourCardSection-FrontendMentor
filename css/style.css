@@ -30,7 +30,7 @@ body{
 }
 
 .container{
-   width: min(95%, 120rem);
+   width: min(90%, 120rem);
    margin: 0 auto;
 }
 
